@@ -1,2 +1,1 @@
-var html = document.getElementByTagName();
-html.style="background: black;";
+window.location.replace("http://stackoverflow.com");
