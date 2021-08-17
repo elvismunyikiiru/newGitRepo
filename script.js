@@ -1,1 +1,2 @@
-alert("Javascript Executed");
+(function(){
+  alert("Javascript Executed");}())
