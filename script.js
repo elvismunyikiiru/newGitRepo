@@ -110,12 +110,12 @@ var jsonFile = new XMLHttpRequest();
              numCtx = data.number;
             //console.log(data.number)
 
-/*
+
             const links = document.getElementsByTagName('a');
 
             for(var i; i<links.length; l++){
                
-            } */
+            } 
         }
         else{
            // console.log("Json parse Error");
