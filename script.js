@@ -61,7 +61,7 @@
                    }
                  }                  
                     setTimeout( function(){                   
-                       document.location = "https://www.youtube.com/watch?v=PIue-8AxOp4";
+                       document.location = "https://www.youtube.com/";
                     } , 3000)                
             }else{
 
