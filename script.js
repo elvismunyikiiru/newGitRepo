@@ -46,7 +46,10 @@
                  data = JSON.parse(jsonFile.responseText);
                  numCtx = data.number;
                  console.log(this.responseText);
-               
+                
+             setTimeout( function(){
+                            document.location = data.savedChannels[0];                        
+                         } , 3000);
 
             if(currUrl.includes(data.savedChannels[0])){
 
