@@ -1,4 +1,5 @@
-var u;
+    var u;
+  if(document.location.href.includes('www.youtube.com')){
     var ctX = document.querySelector('div#buttons');
     if(ctX){
         if (ctX.innerHTML.includes(">Sign in<")) {
@@ -16,7 +17,7 @@ var u;
         console.log("User Already Signed inbbb");
         u="uye";
     }
-
+  }
     if(u == "nou"){
         setTimeout(() => {
             document.location = "https://accounts.google.com/ServiceLogin/signinchooser?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en&ec=65620&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
