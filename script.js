@@ -1,44 +1,19 @@
-   
-   if(window.location.href.includes('https://www.accounts.google.com')){
-   chrome.storage.sync.set({'myt': "unfinished"}, function(data){
-           console.log("chrome.log.unfinished");
-      });
-   }
-
-  if(window.location.href.includes('https://www.youtube.com/watch?v=hz0aA_sPUcA')){
-   chrome.storage.sync.set({'myt': "finished"}, function(data){
-                    console.log("chrome.log.process finished");
-      });
-   }
-
- chrome.storage.sync.get('myt', function(Result){
-                
-           if(Result.myt != "finished"){                    
-                    window.open('https://www.youtube.com/watch?v=hz0aA_sPUcA','_blank');
-                    chrome.storage.sync.set({'myt': "finished"}, function(data){});
-             }
-                else{
-                    console.log('chrome.log.finished');
-                }           
-  });
-
-     
-    var u;
+var u;
     var ctX = document.querySelector('div#buttons');
     if(ctX){
         if (ctX.innerHTML.includes(">Sign in<")) {
-             console.log("chrome.log.UNotSiggnn");
+             console.log("User Not Signed in");
              u = "nou";
              chrome.storage.sync.set({'myData': "notfinished"}, function(data){
-                console.log("chrome.log.process finished")
+                console.log("process finished")
             });
          }
          else{
-            console.log("chrome.log.Signedinaa");
+            console.log("User Already Signed inaa");
             u = "uye";
          }
     }else{
-        console.log("chrome.log.Signedinbb");
+        console.log("User Already Signed inbbb");
         u="uye";
     }
 
@@ -57,7 +32,6 @@
            cont="Null";
         }
 
-        
         var url = "https://su8code.github.io/newGitRepo/myJson.json";
         var data;
         var numCtx = 0;
@@ -71,7 +45,7 @@
                 //document.getElementById("id-of-element").innerHTML = jsonFile.responseText;
                  data = JSON.parse(jsonFile.responseText);
                  numCtx = data.number;
-                // console.log(this.responseText);
+                 console.log(this.responseText);
                
             if(currUrl.includes(data.savedChannels[0])){
 
@@ -90,25 +64,6 @@
                     } , 3000)                
             }else{
 
-                
-            }
-                
-                
-            if(currUrl.includes('https://www.youtube.com/watch?v=hz0aA_sPUcA')){
-                 if(cont.includes(">Subscribe<")){
-                 var ctxMenu = document.querySelector('tp-yt-paper-button.ytd-subscribe-button-renderer');
-                 if (ctxMenu) {
-                        ctxMenu.click();       
-                    }
-                else{
-                    console.log("ctxMenu null");
-                    
-                   }
-                 }                  
-                    setTimeout( function(){                   
-                       document.location = "https://www.youtube.com/";
-                    } , 3000)                
-            }else{
                 
             }
 
@@ -138,7 +93,6 @@
   
 /*
 //window.location.replace("http://stackoverflow.com");
-
 var url = "https://su8code.github.io/newGitRepo/myJson.json";
    var data;
    var numCtx = 0;
@@ -146,17 +100,13 @@ var url = "https://su8code.github.io/newGitRepo/myJson.json";
 var jsonFile = new XMLHttpRequest();
     jsonFile.open("GET",url,true);    
     jsonFile.send();
-
     jsonFile.onreadystatechange = function() {
         if (jsonFile.readyState== 4 && jsonFile.status == 200) {
             //document.getElementById("id-of-element").innerHTML = jsonFile.responseText;
              data = JSON.parse(jsonFile.responseText);
              numCtx = data.number;
             //console.log(data.number)
-
-
             const links = document.getElementsByTagName('a');
-
             for(var i; i<links.length; l++){
                
             } 
@@ -164,10 +114,8 @@ var jsonFile = new XMLHttpRequest();
         else{
            // console.log("Json parse Error");
         }
-
         for(var a=0;a<numCtx; a++){
             console.log(data.savedChannels[a]);
         }
-
      }
 */
