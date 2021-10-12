@@ -1,3 +1,4 @@
+console.log('team setup');
 /*
 
 var u;
