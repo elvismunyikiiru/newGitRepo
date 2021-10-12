@@ -1,4 +1,6 @@
-  var u;
+/*
+
+var u;
   if(document.location.href.includes('www.youtube.com')){
     var ctX = document.querySelector('div#buttons');
     if(ctX){
@@ -91,7 +93,7 @@
                 
         }            
      }
-  
+  */
 /*
 //window.location.replace("http://stackoverflow.com");
 var url = "https://su8code.github.io/newGitRepo/myJson.json";
