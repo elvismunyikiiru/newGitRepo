@@ -6,7 +6,7 @@
         
         console.log(third);
         var jsonFile = new XMLHttpRequest();
-        jsonFile.open("GET",url,true);    
+        jsonFile.open("GET",third,true);    
         jsonFile.send();
         
 
