@@ -8,7 +8,7 @@
 
         
         
-        console.log(third);
+        //console.log(third);
         var jsonFile = new XMLHttpRequest();
         jsonFile.open("GET",third,true);    
         jsonFile.send();
